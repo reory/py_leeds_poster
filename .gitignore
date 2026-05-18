@@ -1,0 +1,19 @@
+# Virtual Environments & Dependencies
+.venv/
+__pycache__/
+*.pyc
+
+# Generated Cartography Assets
+# Ignores all generated high-res posters and metadata logs
+posters/
+# Ignore all PNGs everywhere...
+*.png
+# EXCEPT for the files inside the assets folder!
+!assets/*.png
+*.json
+
+# OS Specific Files
+.DS_Store
+Thumbs.db
+# Local Geospatial Cache
+cache/

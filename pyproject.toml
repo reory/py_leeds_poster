@@ -1,0 +1,12 @@
+[project]
+name = "py-leeds-poster"
+version = "0.1.0"
+description = "Automated vector poster art generator for Leeds, UK."
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "maptoposter>=0.4.0",
+]
+
+[tool.uv]
+managed = true
