@@ -1,7 +1,7 @@
 # 🗺️ py_leeds_poster
 
-![Last Commit](https://img.shields.io/github/last-commit/reory/text2flow?cacheSeconds=60)
-![Repo Size](https://img.shields.io/github/repo-size/reory/text2flow?cacheSeconds=60)
+![Last Commit](https://img.shields.io/github/last-commit/reory/py_leeds_poster?cacheSeconds=60)
+![Repo Size](https://img.shields.io/github/repo-size/reory/py_leeds_poster?cacheSeconds=60)
 ![License](https://img.shields.io/badge/License-MIT-green)
 
 [![Python Version](https://img.shields.io/badge/python-3.12+-blue.svg)](https://www.python.org)
