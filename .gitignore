@@ -11,6 +11,7 @@ posters/
 # EXCEPT for the files inside the assets folder!
 !assets/*.png
 *.json
+project_notes.txt
 
 # OS Specific Files
 .DS_Store

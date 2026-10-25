@@ -5,7 +5,7 @@ description = "Automated vector poster art generator for Leeds, UK."
 readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
-    "maptoposter>=0.4.0",
+    "maptoposter<=0.5.0",
 ]
 
 [tool.uv]

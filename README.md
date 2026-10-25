@@ -76,14 +76,14 @@ cd C:\Users\Admin\Desktop\code\py_leeds_poster
 
 ### Initialize the environment and sync dependencies:
 ```PowerShell
-uv init --python ">=3.12"
+uv init --python ">=3.13"
 uv add maptoposter<=0.5.0
 ```
 
 ### Running the Pipeline
 To execute the batch process and start your local print shop, spin up the main control script:
 
-```PowerShell
+```bash
 uv run generate_leeds.py
 ```
 Note: On its very first pass, the script will pause on the terracotta theme while it queries OpenStreetMap servers for Leeds' vector infrastructure. Once the graph is cached locally, your computer will quickly generate the remaining 16 layouts.
@@ -103,13 +103,14 @@ py_leeds_poster/
 ---
 
 # 🛣️ Roadmap Features
+
 - [ ] Interactive CLI Prompts: Integrate an interactive menu prompt (using click or inquirer) to let users configure target city, radius, and themes dynamically without touching the code.
 
 - [ ] Multi-Location Profiles: Add a locations.json batch config file to sequentially generate poster sets for multiple global cities completely unattended in a single run.
 
-- [ ] Automated Mockup Previews: Use the Pillow library to automatically overlay the finished 300 DPI map artwork onto a framed interior stock image for instant product previews.
-
 - [ ] Print Layout Standards: Introduce padding and boundary multipliers for specific international paper sizes (A1, A2, A3) to lock in precise aspect ratios for printing.
+
+- [ ] Automated Mockup Previews: Use the Pillow library to automatically overlay the finished 300 DPI map artwork onto a framed interior stock image for instant product previews.
 
 - [ ] Parallel Processing Engine: Upgrade the loop to use Python's concurrent.futures multiprocessing, allowing the engine to utilize multiple CPU cores and render multiple themes at the same time.
 

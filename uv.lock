@@ -662,7 +662,7 @@ dependencies = [
 ]
 
 [package.metadata]
-requires-dist = [{ name = "maptoposter", specifier = ">=0.4.0" }]
+requires-dist = [{ name = "maptoposter", specifier = "<=0.5.0" }]
 
 [[package]]
 name = "pyogrio"

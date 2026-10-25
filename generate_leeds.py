@@ -1,8 +1,11 @@
 # imported to execute the external 'maptoposter' CLI
-import subprocess
 import os
+import subprocess
+
 
 def build_leeds_map():
+    """Render 17 different theme variations for Leeds using the map poster CLI tool."""
+
     print("🚀 Initializing Leeds Map Project...")
 
     # The 17 official internal theme style keys
@@ -38,19 +41,31 @@ def build_leeds_map():
             exe_path,
             "--city", "Leeds",
             "--country", "England",
-            "--theme", design['theme'],
-            "--distance", "10000" # Distance from above - aerial viewpoint
+            "--theme", 
+            design['theme'],
+            "--distance", 
+            "10000" # Distance from above - aerial viewpoint
         ]
-    
-        # Run the exact file natively
-        subprocess.run(cli, check=True)
 
-        # Add a 2 second buffer to allow the engine to completely free up
-        # system RAM and file locks before spawning the next poster iteration.
-        print(f" Theme [{design['theme'].upper()}] finished. Pausing for queue saftey..")
+        try:
+            # Run the exact file natively
+            subprocess.run(
+                cli, 
+                check=True,
+                timeout=300, # 5min safety limit
+            )
+
+            print(f" Theme [{design['theme'].upper()}] finished.")
+        
+        except subprocess.CalledProcessError as exc:
+            print(
+                f" Theme [{design['theme'].upper()}] "
+                f"Failed with exit code {exc.returncode}."
+            )
 
     # Rendering complete - print to console
     print("\n ✅ Complete! All designs are in the posters folder!")
+
 
 if __name__ == "__main__":
     build_leeds_map()
