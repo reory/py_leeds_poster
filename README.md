@@ -11,9 +11,31 @@
 [![Data Source](https://img.shields.io/badge/data-OpenStreetMap-green.svg)](https://www.openstreetmap.org)
 [![Output Format](https://img.shields.io/badge/output-300_DPI_PNG-orange.svg)]()
 
-An automated Python pipeline that extracts live geographic vector nodes from the OpenStreetMap API and compiles a complete, print-ready art gallery of Leeds, England. 
+Generate beautiful, print-ready city poster artwork using live OpenStreetMap data.
 
-By mapping the city's complex highway rings, pedestrian grids, and the River Aire across a massive 10,000-meter radius, this project batch-renders **17 distinct, high-resolution aesthetic map designs** completely automated via a single script loop.
+py_leeds_poster automatically creates 17 high-resolution map styles of Leeds, England, ranging from minimalist blueprints to neon cyberpunk designs, ready for printing
+or framing.
+
+---
+
+## 🕵🏼‍♀️ The Problem
+
+Creating custom city map artwork typically requires
+manual GIS tools, graphic design software,
+or significant editing work.
+
+Generating multiple poster styles can become
+time-consuming and repetitive.
+
+## ✅ The Solution
+
+py_leeds_poster automates the process by downloading
+OpenStreetMap data and generating a complete gallery
+of print-ready Leeds map posters in multiple artistic themes.
+
+With a single command, the project creates a collection
+of high-resolution designs suitable for framing,
+printing, or portfolio use.
 
 ---
 
@@ -36,8 +58,8 @@ By mapping the city's complex highway rings, pedestrian grids, and the River Air
 
 ### ✨ Features
 
-* **Explicit Path Routing:** Hardcoded internal virtual environment targeting ensures seamless execution on Windows systems without path distortions.
-* **Sequential Queue Buffer:** Includes an internal 2-second cooldown delay between render iterations to prevent system RAM locks and safely manage file streams.
+* **Windows-Friendly Environment Setup:** Hardcoded internal virtual environment targeting ensures seamless execution on Windows systems without path distortions.
+* **Controlled Rendering Queue:** Includes an internal 2-second cooldown delay between render iterations to prevent system RAM locks and safely manage file streams.
 * **Geospatial Caching:** Automatically utilizes local XML coordinate caches after the first download pass, accelerating the remaining theme builds to seconds per image.
 * **Print-Ready Output:** Automatically outputs 12" x 16" canvas scales at a crisp **300 DPI** (3600 x 4800 px) straight into a dedicated output directory.
 
@@ -81,7 +103,7 @@ uv add maptoposter<=0.5.0
 ```
 
 ### Running the Pipeline
-To execute the batch process and start your local print shop, spin up the main control script:
+To execute the batch process and generate your complete poster collection, spin up the main control script:
 
 ```bash
 uv run generate_leeds.py
